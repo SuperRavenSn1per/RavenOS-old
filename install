@@ -18,6 +18,7 @@ term.setCursorPos(1,8)
 while true do
   write("> ")
   input = read()
+  input = string.lower(input)
   if input == "yes" or input == "ye" or input == "y" then
     startInstall()
   elseif input == "no" or input == "n" then
