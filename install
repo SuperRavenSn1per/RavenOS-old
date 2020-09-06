@@ -1,11 +1,11 @@
 function startInstall()
   term.clear()
-  term.SetCursorPos(1,1)
+  term.setCursorPos(1,1)
   print("Start installing")
 end
 
 term.clear()
-term.SetCursorPos(1,1)
+term.setCursorPos(1,1)
 print("---------------------")
 print("| RavenOS Installer |")
 print("---------------------")
