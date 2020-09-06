@@ -1,0 +1,27 @@
+function startInstall()
+  term.clear()
+  term.SetCursorPos(1,1)
+  print("Start installing")
+end
+
+term.clear()
+term.SetCursorPos(1,1)
+print("---------------------")
+print("| RavenOS Installer |")
+print("---------------------")
+term.setCursorPos(1,5)
+print("Are you sure you want to install RavenOS? (Y/n)")
+term.setTextColor(colors.red)
+print("Warning: Files will be deleted")
+term.setTextColor(colors.white)
+term.setCursorPos(1,8)
+while true do
+  write("> ")
+  input = read()
+  if input == "yes" or input == "ye" or input == "y" then
+    startInstall()
+  elseif input == "no" or input == "n" then
+    print("Installation cancelled")
+    break
+  end
+end
