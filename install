@@ -3,14 +3,6 @@ repoUrl = "https://raw.githubusercontent.com/SuperRavenSn1per/RavenOS/master/"
 files = {"startup"}
 
 function install(filename)
-  term.clear()
-  term.setCursorPos(1,1)
-  print("---------------------")
-  print("| RavenOS Installer |")
-  print("---------------------")
-  term.setCursorPos(1,5)
-  print("Installing..."..filename)
-  term.setCursorPos(1,10)
   shell.run("wget "..repoUrl..filename.." "..filename)
 end
 
@@ -18,6 +10,15 @@ function startInstall()
   term.clear()
   term.setCursorPos(1,1)
   for i,file in pairs(files) do
+    term.clear()
+    term.setCursorPos(1,1)
+    print("---------------------")
+    print("| RavenOS Installer |")
+    print("---------------------")
+    term.setCursorPos(1,5)
+    print("Files: "..i.."/"..#files)
+    print("Installing..."..file)
+    term.setCursorPos(1,20)
     install(file)
   end
   term.clear()
