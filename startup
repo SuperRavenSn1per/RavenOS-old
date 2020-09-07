@@ -1,3 +1,5 @@
+_G.version = "0.1"
+
 term.clear()
 term.setCursorPos(1,1)
 print("BOOTING")
@@ -7,3 +9,4 @@ apis = fs.list(apiDir)
 for i,api in pairs(apis) do
   os.loadAPI(apiDir..api)
 end
+
