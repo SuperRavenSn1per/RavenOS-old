@@ -1,4 +1,8 @@
 term.clear()
 term.setCursorPos(1,1)
 print("BOOTING")
-
+print("LOADING APIS")
+apis = fs.list("rSystem/rAPIs")
+for i,api in pairs(apis) do
+  os.loadAPI(api)
+end
