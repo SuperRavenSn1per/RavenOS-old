@@ -3,7 +3,7 @@ term.setCursorPos(1,1)
 print("BOOTING")
 print("LOADING APIS")
 apiDir = "rSystem/rAPIs"
-apis = fs.list(apiDIr)
+apis = fs.list(apiDir)
 for i,api in pairs(apis) do
   os.loadAPI(apiDir..api)
 end
