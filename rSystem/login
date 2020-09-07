@@ -1,0 +1,3 @@
+term.setBackgroundColor(_G.syscolor)
+term.clear()
+rtext.center("RavenOS v".._G.version)
