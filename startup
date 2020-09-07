@@ -1,0 +1,3 @@
+term.clear()
+term.SetCursorPos(1,1)
+print("RavenOSStartup")
