@@ -10,6 +10,7 @@ function install(filename)
   print("---------------------")
   term.setCursorPos(1,5)
   print("Installing..."..filename)
+  term.setCursorPos(1,10)
   shell.run("wget "..repoUrl..filename.." "..filename)
 end
 
