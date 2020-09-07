@@ -1,5 +1,5 @@
 function center(text, line)
   w,h = term.getSize()
-  term.setCursorPos(w / 2 - string.len(text), line)
+  term.setCursorPos(w / 2 - string.len(text) / 2, line)
   print(text)
 end
