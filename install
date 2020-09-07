@@ -1,5 +1,6 @@
 repoUrl = "https://raw.githubusercontent.com/SuperRavenSn1per/RavenOS/master/"
 
+directories = {"rSystem", "rSystem/rStartup"}
 files = {"startup"}
 
 function install(filename)
@@ -9,6 +10,14 @@ end
 function startInstall()
   term.clear()
   term.setCursorPos(1,1)
+  print("---------------------")
+  print("| RavenOS Installer |")
+  print("---------------------")
+  term.setCursorPos(1,5)
+  print("Making directories...")
+  for i,dir in pairs (directories) do
+    fs.makeDir(dir)
+  end
   for i,file in pairs(files) do
     term.clear()
     term.setCursorPos(1,1)
