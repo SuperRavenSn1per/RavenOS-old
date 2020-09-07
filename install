@@ -19,6 +19,11 @@ function startInstall()
   for i,file in pairs(files) do
     install(file)
   end
+  term.clear()
+  term.setCursorPos(1,1)
+  print("Installation complete... press any key to reboot")
+  os.pullEvent()
+  os.reboot()
 end
 
 term.clear()
