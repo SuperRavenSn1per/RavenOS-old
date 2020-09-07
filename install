@@ -1,6 +1,6 @@
 repoUrl = "https://raw.githubusercontent.com/SuperRavenSn1per/RavenOS/master/"
 
-directories = {"rSystem", "rSystem/rStartup"}
+directories = {"rSystem", "rSystem/rStartup", "rSystem/rAPIs}
 files = {"startup"}
 
 function install(filename)
