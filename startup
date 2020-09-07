@@ -1,3 +1,4 @@
 term.clear()
-term.SetCursorPos(1,1)
-print("RavenOSStartup")
+term.setCursorPos(1,1)
+print("BOOTING")
+
