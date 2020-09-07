@@ -2,7 +2,7 @@ repoUrl = "https://raw.githubusercontent.com/SuperRavenSn1per/RavenOS/master/"
 
 files = {"startup"}
 
-function install(urlFile, filename)
+function install(filename)
   term.clear()
   term.setCursorPos(1,1)
   print("---------------------")
@@ -10,14 +10,14 @@ function install(urlFile, filename)
   print("---------------------")
   term.setCursorPos(1,5)
   print("Installing..."..filename)
-  shell.run("wget "..repoUrl..urlFile.." "..filename)
+  shell.run("wget "..repoUrl..filename.." "..filename)
 end
 
 function startInstall()
   term.clear()
   term.setCursorPos(1,1)
   for i,file in pairs(files) do
-    install(file, file)
+    install(file)
   end
 end
 
