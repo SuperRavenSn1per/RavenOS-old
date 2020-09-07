@@ -1,4 +1,6 @@
 _G.version = "0.1"
+_G.syscolor = colors.green
+_G.highlightcolor = colors.lime
 
 term.clear()
 term.setCursorPos(1,1)
