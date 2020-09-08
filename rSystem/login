@@ -1,4 +1,5 @@
 term.setBackgroundColor(_G.syscolor)
 term.clear()
-rtext.center("RavenOS v".._G.version)
+rtext.center("RavenOS v".._G.version, 2)
 sleep(3)
+
