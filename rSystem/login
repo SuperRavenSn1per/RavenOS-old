@@ -1,5 +1,7 @@
 term.setBackgroundColor(_G.syscolor)
 term.clear()
 rtext.center("RavenOS v".._G.version, 2)
+w,h = term.getSize()
+paintutils.drawLine(5, w/2-5, w/2+5, _G.highlightcolor)
 sleep(3)
 
