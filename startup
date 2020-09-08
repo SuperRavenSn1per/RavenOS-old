@@ -12,5 +12,11 @@ for i,api in pairs(apis) do
   os.loadAPI(apiDir..api)
 end
 print("LOADING COMPLETE")
+term.setBackgroundColor(_G.syscolor)
+term.clear()
+w,h = term.getSize()
+term.setCursorPos(w / 2 - string.len("Welcome to RavenOS!") / 2, h / 2)
+print("Welcome to RavenOS!")
+sleep(3)
 shell.run("rSystem/login")
 
