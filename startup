@@ -11,4 +11,6 @@ apis = fs.list(apiDir)
 for i,api in pairs(apis) do
   os.loadAPI(apiDir..api)
 end
+print("LOADING COMPLETE")
+shell.run("rSystem/login")
 
