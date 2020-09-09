@@ -1,6 +1,9 @@
 lineSize = 10
 centerPos = 9
 
+usernameCorrect = "admin"
+passwordCorrect = "123"
+
 term.setBackgroundColor(_G.syscolor)
 term.clear()
 rtext.center("RavenOS v".._G.version, 2)
@@ -22,7 +25,7 @@ while true do
     usernameInput = read()
   elseif x >= w / 2 - lineSize and x <= w / 2 + lineSize and y == centerPos+1 then
     term.setCursorPos(w/2-lineSize, centerPos+1)
-    passwordInput = read()
+    passwordInput = read("*")
   elseif x >= w / 2 - 4 and x <= w / 2 + 4 and y == centerPos + 3
     if usernameInput == usernameCorrect and passwordInput == passwordCorrect then
       print("Done")
