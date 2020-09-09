@@ -13,7 +13,7 @@ print("Username:")
 term.setCursorPos(w/2-lineSize-string.len("Password: "), centerPos+1)
 print("Password:")
 term.setBackgroundColor(_G.highlightcolor)
-term.setCursorPos(w/2-lineSize-string.len(" Log In "), centerPos+3)
+term.setCursorPos(w/2-lineSize-string.len(" Log In ") / 2, centerPos+3)
 print(" Log In ")
 while true do
   event, button, x, y = os.pullEvent("mouse_click")
