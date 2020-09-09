@@ -13,9 +13,14 @@ print("Username:")
 term.setCursorPos(w/2-lineSize-string.len("Password: "), centerPos+1)
 print("Password:")
 term.setBackgroundColor(_G.highlightcolor)
-term.setCursorPos(w/2-lineSize, centerPos-1)
-usernameInput = read()
-term.setCursorPos(w/2-lineSize, centerPos+1)
-passwordInput = read()
+while true do
+  event, button, x, y = os.pullEvent("mouse_click")
+  if x >= w / 2 - lineSize and x =< w / 2 + lineSize and y == centerPos-1 then
+    term.setCursorPos(w/2-lineSize, centerPos-1)
+    usernameInput = read()
+  elseif x >= w / 2 - lineSize and x =< w / 2 + lineSize and y == centerPos+1 then
+    term.setCursorPos(w/2-lineSize, centerPos+1)
+    passwordInput = read()
+  end
+end
 sleep(3)
-
