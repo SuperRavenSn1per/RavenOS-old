@@ -27,8 +27,10 @@ while true do
     term.setCursorPos(w/2-lineSize, centerPos+1)
     passwordInput = read("*")
   elseif x >= w / 2 - 4 and x <= w / 2 + 4 and y == centerPos + 3
-    if usernameInput == usernameCorrect and passwordInput == passwordCorrect then
-      print("Done")
+    if usernameInput == usernameCorrect then
+      if passwordInput == passwordCorrect then
+        print("Done!")
+      end
     end
   end
 end
