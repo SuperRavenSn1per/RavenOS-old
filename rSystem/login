@@ -15,10 +15,10 @@ print("Password:")
 term.setBackgroundColor(_G.highlightcolor)
 while true do
   event, button, x, y = os.pullEvent("mouse_click")
-  if x >= w / 2 - lineSize and x =< w / 2 + lineSize and y == centerPos-1 then
+  if x >= w / 2 - lineSize and x <= w / 2 + lineSize and y == centerPos-1 then
     term.setCursorPos(w/2-lineSize, centerPos-1)
     usernameInput = read()
-  elseif x >= w / 2 - lineSize and x =< w / 2 + lineSize and y == centerPos+1 then
+  elseif x >= w / 2 - lineSize and x <= w / 2 + lineSize and y == centerPos+1 then
     term.setCursorPos(w/2-lineSize, centerPos+1)
     passwordInput = read()
   end
