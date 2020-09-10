@@ -1,6 +1,8 @@
-_G.version = "0.1"
-_G.syscolor = colors.green
-_G.highlightcolor = colors.lime
+settings.load("rSystem/settings")
+
+_G.version = settings.get("version")
+_G.syscolor = settings.get("syscolor")
+_G.highlightcolor = settings.get("highlightcolor")
 
 term.clear()
 term.setCursorPos(1,1)
