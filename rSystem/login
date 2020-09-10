@@ -32,8 +32,10 @@ while true do
     else
       term.setCursorPos(w/2-string.len("Username/Password Incorrect") / 2, centerPos+5)
       term.setTextColor(colors.red)
+      term.setBackgroundColor(_G.syscolor)
       write("Username/Password Incorrect")
       term.setTextColor(colors.white)
+      term.setBackgroundColor(_G.highlightcolor)
     end
   end
 end
