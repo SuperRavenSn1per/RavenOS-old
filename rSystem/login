@@ -29,6 +29,11 @@ while true do
   elseif x >= w / 2 - 4 and x <= w / 2 + 4 and y == centerPos + 3 then
     if usernameInput == usernameCorrect and passwordInput == passwordCorrect then
       print("Done!")
+    else
+      term.setCursorPos(w/2-string.len("Username/Password Incorrect") / 2, centerPos+5)
+      term.setTextColor(colors.red)
+      write("Username/Password Incorrect")
+      term.setTextColor(colors.white)
     end
   end
 end
