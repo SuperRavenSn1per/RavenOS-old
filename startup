@@ -29,10 +29,10 @@ else
   term.clear()
   term.setCursorPos(w / 2 - string.len("We've noticed this is your first time start up!") / 2, 2)
   term.setCursorPos(w / 2 - string.len("You can start off by creating an account.") / 2, 3)
-  term.setBackgroundColor(settings.get("highlightcolor")
-  term.setCursorPos(w / 2 - string.len(" Create Account "), centerPos-1)
+  term.setBackgroundColor(settings.get("highlightcolor"))
+  term.setCursorPos(w / 2 - string.len(" Create Account ") / 2, centerPos-1)
   print(" Create Account ")
-  term.setCursorPos(w / 2 - string.len(" Skip "), centerPos+1)
+  term.setCursorPos(w / 2 - string.len(" Skip ") / 2, centerPos+1)
   print(" Skip ")
   sleep(3)
 end
