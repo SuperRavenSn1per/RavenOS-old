@@ -4,6 +4,8 @@ _G.version = settings.get("version")
 _G.syscolor = settings.get("syscolor")
 _G.highlightcolor = settings.get("highlightcolor")
 
+centerPos = 9
+
 term.clear()
 term.setCursorPos(1,1)
 print("BOOTING")
@@ -14,11 +16,23 @@ for i,api in pairs(apis) do
   os.loadAPI(apiDir..api)
 end
 print("LOADING COMPLETE")
+
 term.setBackgroundColor(_G.syscolor)
 term.clear()
 w,h = term.getSize()
 term.setCursorPos(w / 2 - string.len("Welcome to RavenOS!") / 2, h / 2)
 print("Welcome to RavenOS!")
 sleep(3)
-shell.run("rSystem/login")
-
+if not fs.exists("firstTimeStart") then
+  shell.run("rSystem/login")
+else
+  term.clear()
+  term.setCursorPos(w / 2 - string.len("We've noticed this is your first time start up!") / 2, 2)
+  term.setCursorPos(w / 2 - string.len("You can start off by creating an account.") / 2, 3)
+  term.setBackgroundColor(_G.highlightColor)
+  term.setCursorPos(w / 2 - string.len(" Create Account "), centerPos-1)
+  print(" Create Account ")
+  term.setCursorPos(w / 2 - string.len(" Skip "), centerPos+1)
+  print(" Skip ")
+  sleep(3)
+end
