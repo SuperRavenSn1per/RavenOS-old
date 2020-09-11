@@ -36,6 +36,8 @@ while true do
       term.setBackgroundColor(_G.syscolor)
       term.clear()
       rtext.center("Welcome, "..usernameCorrect, 9)     
+      sleep(3)
+      shell.run("rSystem/desktop")
     else
       term.setCursorPos(w/2-string.len("Username/Password Incorrect") / 2, centerPos+5)
       term.setTextColor(colors.red)
