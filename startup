@@ -28,7 +28,9 @@ if not fs.exists("firstTimeStart") then
 else
   term.clear()
   term.setCursorPos(w / 2 - string.len("We've noticed this is your first time start up!") / 2, 2)
+  print("We've noticed this is your first time start up!")
   term.setCursorPos(w / 2 - string.len("You can start off by creating an account.") / 2, 3)
+  print("You can start off by creating an account.")
   term.setBackgroundColor(settings.get("highlightcolor"))
   term.setCursorPos(w / 2 - string.len(" Create Account ") / 2, centerPos-1)
   print(" Create Account ")
