@@ -1,8 +1,12 @@
 lineSize = 10
 centerPos = 9
 
-usernameCorrect = "admin"
-passwordCorrect = "123"
+userFile = fs.open("rSystem/username", "r")
+usernameCorrect = userFile.read()
+userFile.close()
+passwordFile = fs.open("rSystem/password", "r")
+passwordCorrect = passwordFile.read()
+passwordFile.close()
 
 term.setBackgroundColor(_G.syscolor)
 term.clear()
