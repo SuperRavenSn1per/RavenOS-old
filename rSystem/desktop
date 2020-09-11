@@ -1,4 +1,21 @@
+bottomBarLocation = 19
+w,h = term.getSize()
+
 term.clear()
 term.setCursorPos(1,1)
 background.draw("background1")
+paintutils.drawLine(1, bottomBarLocation, w, bottomBarLocation, _G.syscolor)
+paintutils.drawPixel(1, bottomBarLocation, _G.highlightcolor)
+term.setCursorPos(1, bottomBarLocation)
+print("R")
+
+
+
+
+
+
+
+
+
+
 sleep(5)
