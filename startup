@@ -51,7 +51,7 @@ else
       fs.delete("firstTimeStart")
       settings.set("useLogin", false)
       settings.save("rSystem/settings")
-      print("skip")
+      shell.run("rSystem/desktop")
     end
   end
 end
