@@ -27,7 +27,7 @@ if not fs.exists("firstTimeStart") then
   if settings.get("useLogin") == true then
     shell.run("rSystem/login")
   else
-    print("No for now")
+    shell.run("rSystem/desktop")
   end
 else
   term.clear()
