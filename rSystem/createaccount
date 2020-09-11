@@ -1,0 +1,37 @@
+lineSize = 10
+centerPos = 9
+
+term.setBackgroundColor(_G.syscolor)
+term.clear()
+rtext.center("RavenOS v".._G.version, 2)
+w,h = term.getSize()
+rtext.center("Account Creation", centerPos+3)
+paintutils.drawLine(w/2-lineSize, centerPos-1, w/2+lineSize, centerPos-1, _G.highlightcolor)
+paintutils.drawLine(w/2-lineSize, centerPos+1, w/2+lineSize, centerPos+1, _G.highlightcolor)
+term.setBackgroundColor(_G.syscolor)
+term.setCursorPos(w/2-lineSize-string.len("Username: "), centerPos-1)
+print("Username:")
+term.setCursorPos(w/2-lineSize-string.len("Password: "), centerPos+1)
+print("Password:")
+term.setBackgroundColor(_G.highlightcolor)
+term.setCursorPos(w/2-string.len(" Create Account ") / 2, centerPos+3)
+print(" Create Account ")
+while true do
+  event, button, x, y = os.pullEvent("mouse_click")
+  if x >= w / 2 - lineSize and x <= w / 2 + lineSize and y == centerPos-1 then
+    term.setCursorPos(w/2-lineSize, centerPos-1)
+    usernameInput = read()
+  elseif x >= w / 2 - lineSize and x <= w / 2 + lineSize and y == centerPos+1 then
+    term.setCursorPos(w/2-lineSize, centerPos+1)
+    passwordInput = read()
+  elseif x >= w / 2 - 8 and x <= w / 2 + 8 and y == centerPos + 3 then
+    userFile = fs.open("rSystem/username", "w")
+    userFile.write(usernameInput)
+    userFile.close()
+    passwordFile = fs.open("rSystem/password", "w")
+    passwordFile.write(passwordInput)
+    passwordFile.close()
+    shell.run("rSystem/login")
+  end
+end
+sleep(3)
