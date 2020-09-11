@@ -24,7 +24,11 @@ term.setCursorPos(w / 2 - string.len("Welcome to RavenOS!") / 2, h / 2)
 print("Welcome to RavenOS!")
 sleep(3)
 if not fs.exists("firstTimeStart") then
-  shell.run("rSystem/login")
+  if settings.get("useLogin") == true then
+    shell.run("rSystem/login")
+  else
+    print("No for now")
+  end
 else
   term.clear()
   term.setCursorPos(w / 2 - string.len("We've noticed this is your first time start up!") / 2, 2)
