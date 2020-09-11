@@ -1,0 +1,4 @@
+term.clear()
+term.setCursorPos(1,1)
+background.draw("background1")
+sleep(5)
