@@ -1,0 +1,4 @@
+function draw(bgName)
+  bg = paintutils.loadImage("rSystem/rImages/"..bgName)
+  paintutils.drawImage(bg, 1, 1)
+end
