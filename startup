@@ -40,7 +40,7 @@ else
     event, button, x, y = os.pullEvent("mouse_click")
     if x >= w / 2 - 9 and x <= w / 2 + 8 and y == centerPos-1 then
       print("create")
-    elseif x >= w / 2 - 3 and x <= w / 2 + 3 and y == centerPos+1 then
+    elseif x >= w / 2 - 4 and x <= w / 2 + 3 and y == centerPos+1 then
       print("skip")
     end
   end
