@@ -47,6 +47,8 @@ else
       shell.run("rSystem/createAccount")
     elseif x >= w / 2 - 5 and x <= w / 2 + 3 and y == centerPos+1 then
       fs.delete("firstTimeStart")
+      settings.set("useLogin", false)
+      settings.save("rSystem/settings")
       print("skip")
     end
   end
