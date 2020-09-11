@@ -1,7 +1,7 @@
 repoUrl = "https://raw.githubusercontent.com/SuperRavenSn1per/RavenOS/master/"
 
 directories = {"rSystem", "rSystem/rStartup", "rSystem/rAPIs", "rSystem/rImages"}
-files = {"startup", "rSystem/rAPIs/rtext", "rSystem/login", "rSystem/createAccount", "rSystem/rImages/background1"}
+files = {"startup", "rSystem/rAPIs/rtext", "rSystem/login", "rSystem/createAccount", "rSystem/rImages/background1", "rSystem/rAPIs/background"}
 
 function install(filename)
   shell.run("wget "..repoUrl..filename.." "..filename)
