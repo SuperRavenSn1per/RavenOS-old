@@ -1,5 +1,11 @@
 w,h = term.getSize()
 
+menuItems = {
+"Shutdown",
+"Logout  ",
+"Settings"
+}
+
 term.clear()
 term.setCursorPos(1,1)
 background.draw("background1")
@@ -7,11 +13,17 @@ paintutils.drawLine(1, h, w, h, _G.syscolor)
 paintutils.drawPixel(1, h, _G.highlightcolor)
 term.setCursorPos(1, h)
 write("R")
+term.setCursorPos(1,h)
 
 while true do
   event, button, x, y = os.pullEvent("mouse_click")
   if x == 1 and y == h then
-    paintutils.drawFilledBox(1, h-1, 5, h-8, _G.highlightcolor)
+    for i, item in pairs(menuItems) do
+      posX, posY = term.getCursorPos()
+      posY = posY-1
+      term.setCursorPos(1, posY)
+      write(item)
+    end
   end
 end
 
