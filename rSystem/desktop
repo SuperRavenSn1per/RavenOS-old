@@ -9,9 +9,9 @@ term.setCursorPos(1, h)
 write("R")
 
 while true do
-  event, button, x, y = os.pullEventRaw("mouse_click")
+  event, button, x, y = os.pullEvent("mouse_click")
   if x == 1 and y == h then
-    paintutils.drawFilledBox(1, h+1, 5, h+8, _G.highlightcolor)
+    paintutils.drawFilledBox(1, h-1, 5, h-8, _G.highlightcolor)
   end
 end
 
