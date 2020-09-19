@@ -28,7 +28,8 @@ function startInstall()
     print("| RavenOS Installer |")
     print("---------------------")
     term.setCursorPos(1,5)
-    print("Files: "..i.."/"..#files)
+    percent = i/#files * 100
+    print("Files: "..i.."/"..#files.." | "..percent)
     print("Installing..."..file)
     install(file)
   end
