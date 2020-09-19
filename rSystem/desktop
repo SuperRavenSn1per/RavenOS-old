@@ -1,28 +1,39 @@
 w,h = term.getSize()
 
+menuOpen = false
+
 menuItems = {
 "Shutdown",
 "Logout  ",
 "Settings"
 }
 
-term.clear()
-term.setCursorPos(1,1)
-background.draw("background1")
-paintutils.drawLine(1, h, w, h, _G.syscolor)
-paintutils.drawPixel(1, h, _G.highlightcolor)
-term.setCursorPos(1, h)
-write("R")
-term.setCursorPos(1,h)
+function drawDesktop()
+  term.clear()
+  term.setCursorPos(1,1)
+  background.draw("background1")
+  paintutils.drawLine(1, h, w, h, _G.syscolor)
+  paintutils.drawPixel(1, h, _G.highlightcolor)
+  term.setCursorPos(1, h)
+  write("R")
+  term.setCursorPos(1,h)
+end
+
+drawDesktop()
 
 while true do
   event, button, x, y = os.pullEvent("mouse_click")
   if x == 1 and y == h then
-    for i, item in pairs(menuItems) do
-      posX, posY = term.getCursorPos()
-      posY = posY-1
-      term.setCursorPos(1, posY)
-      write(item)
+    if menuOpen == false then
+      for i, item in pairs(menuItems) do
+        posX, posY = term.getCursorPos()
+        posY = posY-1
+        term.setCursorPos(1, posY)
+        write(item)
+        menuOpen = true
+      end
+    else
+      drawDesktop()
     end
   end
 end
