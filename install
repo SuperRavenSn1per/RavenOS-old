@@ -32,11 +32,14 @@ function startInstall()
     numberOfBars = math.floor(20 * percent / 100)
     print("Installing..."..file)
     print("")
-    print("(                    )"..percent.."%")
+    term.setBackgroundColor(colors.green)
+    print("                    "..percent.."%")
     term.setCursorPos(2,7)
+    term.setBackgroundColor(colors.lime)
     for i = 1,numberOfBars do
-      write("=")
+      write(" ")
     end
+    term.setBackgroundColor(colors.black)
     install(file)
   end
   settings.set("syscolor", colors.green)
