@@ -36,6 +36,8 @@ while true do
   else
     if x >= 1 and x <= string.len("Shutdown") and y == h-1 then
       os.shutdown()
+    elseif x >= 1 and x <= string.len("Logout  ") and y == h-2 then
+      shell.run("rSystem/login")
     else
       drawDesktop()
       menuOpen = false
