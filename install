@@ -29,8 +29,14 @@ function startInstall()
     print("---------------------")
     term.setCursorPos(1,5)
     percent = math.floor(i/#files * 100)
-    print("Files: "..i.."/"..#files.." | "..percent.."%")
+    numberOfBars = math.floor(20 * percent / 100)
     print("Installing..."..file)
+    print("")
+    print("(                    )"..percent.."%")
+    term.setCursorPos(2,7)
+    for i = 1,numberOfBars do
+      write("=")
+    end
     install(file)
   end
   settings.set("syscolor", colors.green)
