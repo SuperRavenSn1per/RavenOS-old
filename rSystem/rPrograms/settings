@@ -1,0 +1,3 @@
+term.setBackgroundColor(_G.syscolor)
+rtext.center("Settings", 2)
+sleep(5)
