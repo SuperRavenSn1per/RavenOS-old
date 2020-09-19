@@ -34,7 +34,11 @@ while true do
       end
     end
   else
-    drawDesktop()
-    menuOpen == false
+    if x >= 1 and x <= string.len("Shutdown") and y == h-1 then
+      os.shutdown()
+    else
+      drawDesktop()
+      menuOpen = false
+    end
   end
 end
