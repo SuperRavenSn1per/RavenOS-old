@@ -1,7 +1,7 @@
 repoUrl = "https://raw.githubusercontent.com/SuperRavenSn1per/RavenOS/master/"
  
-directories = {"rSystem", "rSystem/rStartup", "rSystem/rAPIs", "rSystem/rImages"}
-files = {"startup", "rSystem/rAPIs/rtext", "rSystem/login", "rSystem/createAccount", "rSystem/rImages/background1", "rSystem/rAPIs/background", "rSystem/desktop"}
+directories = {"rSystem", "rSystem/rStartup", "rSystem/rAPIs", "rSystem/rImages", "rSystem/rPrograms"}
+files = {"startup", "rSystem/rAPIs/rtext", "rSystem/login", "rSystem/createAccount", "rSystem/rImages/background1", "rSystem/rAPIs/background", "rSystem/desktop", "rSystem/rPrograms/settings}
  
 function install(filename)
   content = http.get(repoUrl..filename).readAll()
