@@ -34,6 +34,7 @@ while true do
       end
     else
       drawDesktop()
+      menuOpen = false
     end
   end
 end
