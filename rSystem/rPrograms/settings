@@ -1,6 +1,6 @@
 w,h = term.getSize()
 
-centerPos = h / 2
+centerPos = math.floor(h / 2)
 
 term.setBackgroundColor(_G.syscolor)
 term.clear()
