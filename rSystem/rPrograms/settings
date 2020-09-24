@@ -9,4 +9,9 @@ term.setBackgroundColor(_G.highlightcolor)
 rtext.center(" System Settings ", centerPos - 2)
 rtext.center(" Login Settings ", centerPos)
 rtext.center(" Visual Settings ", centerPos + 2)
-sleep(5)
+while true do
+  event, button, x, y = os.pullEvent("mouse_click")
+  if x >= w - string.len(" System Settings ") / 2 and x <= w + string.len(" System Settings ") / 2 and y == centerPos - 2 then
+    write("ASDKLASJD")
+  end
+end
