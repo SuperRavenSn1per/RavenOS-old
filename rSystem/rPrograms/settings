@@ -1,3 +1,12 @@
+w,h = term.getSize()
+
+centerPos = h / 2
+
 term.setBackgroundColor(_G.syscolor)
+term.clear()
 rtext.center("Settings", 2)
+term.setBackgroundColor(_G.highlightcolor)
+rtext.center(" System Settings ", centerPos - 2)
+rtext.center(" Login Settings ", centerPos)
+rtext.center(" Visual Settings ", centerPos + 2)
 sleep(5)
