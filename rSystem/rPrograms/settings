@@ -12,6 +12,10 @@ rtext.center(" Visual Settings ", centerPos + 2)
 while true do
   event, button, x, y = os.pullEvent("mouse_click")
   if x >= w / 2 - string.len(" System Settings ") / 2 and x <= w / 2 + string.len(" System Settings ") / 2 and y == centerPos - 2 then
-    write("ASDKLASJD")
+    write("System")
+  elseif x >= w / 2 - string.len(" Login Settings ") / 2 and x <= w / 2 + string.len(" Login Settings ") / 2 and y == centerPos then
+    write("Login")
+  elseif x >= w / 2 - string.len(" Visual Settings ") / 2 and x <= w / 2 + string.len(" Visual Settings ") / 2 and y == centerPos + 2 then
+    write("Login")
   end
 end
